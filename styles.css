@@ -1,0 +1,218 @@
+@import url(/variable.css);
+@import url(/common.css);
+@import url(/font.css);
+
+.community-wrapper {
+    margin: 40px auto;
+    max-width: 970px;
+}
+.image-carousel-container {
+    padding: 0 30px;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+}
+.image-carousel-container::before, .image-carousel-container::after {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: var(--primaryTextColor);
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+}
+.image-carousel-container::before {
+    content: "<";
+    left: 0px;
+}
+.image-carousel-container::after {
+    content: ">";
+    right: 0;
+}
+.image-card-block {
+    max-width: 285px;
+    margin-right: 25px;
+}
+.image-card-block:last-child {
+    margin-right: 0;
+}
+.image-section {
+    height: 235px;
+    min-width: 285px;
+}
+.image-section img {
+    height: 235px;
+    width: 285px;
+}
+.image-name-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px;
+    color: var(--primaryTextColor);
+    font-family: "AgencyFB-Bold";
+    font-size: 24px;
+}
+.image-card-block:nth-child(1n + 1) .image-name-text {
+    background: #3dd0d8;
+}
+.image-card-block:nth-child(2n) .image-name-text {
+    background: #5c9ddd;
+}
+.image-card-block:nth-child(3n) .image-name-text {
+    background: #7c69e3;
+}
+.comment-container {
+    background: var(--primaryBgColor);
+    padding: 60px;
+    border-radius: 10px;
+    margin: 60px 0 0;
+}
+.comment-container .comments-header-text {
+    color: var(--primaryTextColor);
+    margin: 0;
+    font-family: "AgencyFB-Bold";
+    margin-bottom: 40px;
+}
+
+.comment-submit-btn {
+    border-radius: 10px;
+    background-image: linear-gradient(to left, #9252ea, #40d8dd);
+    color: var(--primaryTextColor);
+    padding: 22px 52px;
+}
+.comment-textarea {
+    resize: none;
+    padding: 25px 30px;
+    min-height: 160px;
+    width: -webkit-fill-available;
+    border: 0;
+    background: var(--secondaryBgColor);
+    color: var(--primaryTextColor);
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-family: "Roboto-Italic";
+}
+.comment-input {
+    padding: 22px 30px;
+    background: var(--secondaryBgColor);
+    color: var(--primaryTextColor);
+    min-width: 210px;
+    font-family: "Roboto-Italic";
+}
+.comment-input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.user-comment-block {
+    display: flex;
+    margin-bottom: 36px;
+}
+.user-comment-block:last-child {
+    margin-bottom: 55px;
+}
+.user-comment-block.user-comment-sub-block1 {
+    margin-left: 110px;
+}
+.user-comment-block.user-comment-sub-block2 {
+    margin-left: 220px;
+}
+.user-image-section {
+    background: #37332c;
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+    border-radius: 50%;
+}
+.user-image {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.user-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-name {
+    font-size: 24px;
+    font-family: "AgencyFB-Bold";
+    color: var(--primaryTextColor);
+}
+.user-post-date {
+    font-size: 14px;
+    font-family: "Roboto-Bold";
+    color: var(--secondaryTextColor);
+}
+.user-comment-text {
+    font-size: 16px;
+    font-family: "Roboto-Light";
+    color: var(--secondaryTextColor);
+    line-height: 26px;
+    margin-top: 20px;
+}
+.comment-reply-btn {
+    background: transparent;
+    color: #3dd0d8;
+    padding: 0;
+}
+.comment-reply-btn:disabled {
+    color: rgba(61, 208, 216, 0.5);
+}
+.user-comment-section {
+    margin: 20px 0 0 30px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .community-wrapper {
+        margin: 20px 30px;
+    }
+    .comment-container {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    .comment-input-section {
+        flex-wrap: wrap;
+    }
+    .comment-input {
+        width: 100%;
+        margin-bottom: 20px;
+        min-width: auto;
+    }
+    .image-carousel-container {
+        justify-content: flex-start;
+        overflow: scroll;
+    }
+}
+@media screen and (max-width: 600px) and (min-width: 320px) {
+    .user-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .comment-reply-btn {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .community-wrapper {
+        margin: 20px 30px;
+    }
+    .comment-container {
+        margin: 20px 0;
+    }
+    .comment-input-section {
+        flex-wrap: wrap;
+        justify-content: normal;
+    }
+    .comment-input {
+        margin: 0 20px 20px 0;
+    } 
+}
+@media screen and (max-width: 1024px) and (min-width: 320px) {
+    .image-carousel-container::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+}

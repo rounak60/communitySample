@@ -1,0 +1,37 @@
+body {
+    background: #18172e;
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+}
+input {
+    outline: none;
+    border: 0;
+    font-size: 14px;
+}
+input::placeholder, textarea::placeholder {
+    color: var(--secondaryTextColor);
+    font-family: "Roboto-Italic";
+    font-size: 14px;
+    text-transform: uppercase;
+}
+button {
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+    font-family: "Roboto-Bold";
+}
+button:disabled {
+    cursor: default;
+    pointer-events: none;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.pointer {
+    cursor: pointer;
+}
